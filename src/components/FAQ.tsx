@@ -38,10 +38,7 @@ export default function FAQ() {
         
         {/* Header */}
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-[#0f3d2e] text-xs font-bold uppercase tracking-wider">
-            <HelpCircle className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Got Questions? We Have Answers</span>
-          </div>
+
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a261c] font-serif tracking-tight">
             Frequently Asked Questions
           </h2>

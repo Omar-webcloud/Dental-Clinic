@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { CLINIC_CONFIG, createWhatsAppUrl, AppointmentData } from "@/lib/whatsapp";
 import { SERVICES_DATA } from "@/data/services";
 import {
@@ -8,7 +9,6 @@ import {
   Clock,
   User,
   Phone,
-  Sparkles,
   MessageCircle,
   CheckCircle2,
   Send,
@@ -64,47 +64,38 @@ export default function AppointmentForm() {
     <section id="book" className="py-20 bg-[#faf8f5] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           
-          {/* Left Column: Form Description & Benefits */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-[#0f3d2e] text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Direct WhatsApp Appointment</span>
-            </div>
+          {/* Left Column: Image Panel */}
+          <div className="hidden lg:block lg:col-span-5 relative rounded-3xl overflow-hidden min-h-[600px]">
+            <Image
+              src="/images/consultation-smile.jpg"
+              alt="Happy dental patient with a perfect smile at Evrika Dent"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 1200px) 40vw, 500px"
+            />
+            {/* Dark gradient overlay at the bottom */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#041510]/90 via-[#041510]/20 to-transparent" />
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a261c] font-serif tracking-tight leading-tight">
-              Schedule Your Dental Consultation in 30 Seconds
-            </h2>
-
-            <p className="text-sm sm:text-base text-stone-600 leading-relaxed">
-              No complicated portals or account logins. Fill in your preferred time, and our coordinator will promptly reply on WhatsApp with exact open slots.
-            </p>
-
-            {/* Feature points */}
-            <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-stone-200 shadow-xs">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                <div className="text-xs">
-                  <strong className="text-[#0a261c] block font-semibold">Zero Spam, Zero Databases</strong>
-                  <span className="text-stone-500">Your details go directly to our encrypted WhatsApp chat.</span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-stone-200 shadow-xs">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                <div className="text-xs">
-                  <strong className="text-[#0a261c] block font-semibold">Fast Human Response</strong>
-                  <span className="text-stone-500">Average WhatsApp reply time is under 5 minutes during working hours.</span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-stone-200 shadow-xs">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                <div className="text-xs">
-                  <strong className="text-[#0a261c] block font-semibold">Personalized 3D Plan Included</strong>
-                  <span className="text-stone-500">Consultation includes complete examination and digital options overview.</span>
-                </div>
+            {/* Overlay content — minimal */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 space-y-3">
+              <h2 className="text-2xl font-extrabold text-white font-serif leading-snug text-shadow-md">
+                Your smile transformation<br />
+                <span className="text-emerald-300">starts with one message</span>
+              </h2>
+              {/* 3 compact trust pills */}
+              <div className="flex flex-wrap gap-2 pt-1">
+                {[
+                  { icon: <CheckCircle2 className="w-3 h-3" />, label: "Reply in 5 min" },
+                  { icon: <CheckCircle2 className="w-3 h-3" />, label: "Zero spam" },
+                  { icon: <CheckCircle2 className="w-3 h-3" />, label: "Free consultation" },
+                ].map(({ icon, label }) => (
+                  <div key={label} className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full glass-card-hero border border-white/15 text-emerald-200 text-[11px] font-medium backdrop-blur-sm">
+                    <span className="text-emerald-400">{icon}</span>
+                    {label}
+                  </div>
+                ))}
               </div>
             </div>
           </div>

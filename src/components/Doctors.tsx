@@ -12,10 +12,7 @@ export default function Doctors() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-[#0f3d2e] text-xs font-bold uppercase tracking-wider">
-            <Award className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Master Clinicians</span>
-          </div>
+
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a261c] font-serif tracking-tight">
             Meet Our Expert Dental Specialists
           </h2>

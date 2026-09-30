@@ -11,10 +11,7 @@ export default function Testimonials() {
         {/* Header with Google reviews badge */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl space-y-3">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-[#0f3d2e] text-xs font-bold uppercase tracking-wider">
-              <Star className="w-3.5 h-3.5 fill-emerald-600 text-emerald-600" />
-              <span>Verified Patient Experiences</span>
-            </div>
+
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a261c] font-serif tracking-tight">
               What Our Patients Say
             </h2>

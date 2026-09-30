@@ -21,10 +21,7 @@ export default function TechnologySection() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-900/80 border border-emerald-500/40 text-emerald-300 text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Digital Dental Infrastructure</span>
-          </div>
+
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif tracking-tight">
             Next-Gen Technology for Flawless Results
           </h2>
