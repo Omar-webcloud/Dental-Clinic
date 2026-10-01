@@ -61,7 +61,7 @@ export default function TreatmentProcess() {
               >
                 {/* Step number badge */}
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#0f3d2e] flex items-center justify-center group-hover:bg-[#0f3d2e] group-hover:text-emerald-300 transition-colors">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-950 flex items-center justify-center group-hover:bg-[#0f3d2e] group-hover:text-white transition-colors">
                     <Icon className="w-6 h-6" />
                   </div>
                   <span className="text-3xl font-extrabold text-stone-200 group-hover:text-emerald-300 transition-colors font-serif">

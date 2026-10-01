@@ -32,18 +32,18 @@ export default function Header() {
   return (
     <>
       {/* Top Notification / Information Bar */}
-      <div className="bg-[#051a13] text-[#c6ded3] text-xs py-2 px-4 border-b border-[#0f3d2e]/40">
+      <div className="bg-[#e9ebe8] text-[#68706d] text-xs py-2 px-4 border-b border-[#d9ddda]">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center gap-4 text-[11px] sm:text-xs">
             <span className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
               Accepting New Patients
             </span>
-            <span className="hidden md:flex items-center gap-1.5 text-[#9abfb0]">
+            <span className="hidden md:flex items-center gap-1.5 text-[#68706d]">
               <Clock className="w-3.5 h-3.5 text-emerald-400" />
               {CLINIC_CONFIG.workingHours.weekdays}
             </span>
-            <span className="hidden lg:flex items-center gap-1.5 text-[#9abfb0]">
+            <span className="hidden lg:flex items-center gap-1.5 text-[#68706d]">
               <MapPin className="w-3.5 h-3.5 text-emerald-400" />
               New York, NY 10001
             </span>
@@ -96,16 +96,16 @@ export default function Header() {
 
       {/* Main Navigation Bar */}
       <header
-        className={`sticky top-0 z-40 transition-all duration-300 ${
+        className={`sticky top-0 z-40 border-b border-[#d9ddda] transition-all duration-300 ${
           isScrolled
-            ? "bg-[#0a261c]/95 backdrop-blur-md shadow-lg border-b border-emerald-900/30 py-3"
-            : "bg-[#0a261c]/90 backdrop-blur-sm py-4"
+            ? "bg-[#faf8f5]/95 backdrop-blur-md shadow-sm py-3"
+            : "bg-[#faf8f5] py-4"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo matching screenshot */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-[#0f3d2e] p-2 flex items-center justify-center shadow-md border border-emerald-500/30 group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 bg-[#202321] p-2 flex items-center justify-center transition-transform group-hover:scale-105">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -121,14 +121,14 @@ export default function Header() {
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="text-xl font-bold tracking-tight text-white font-serif">
+                <span className="text-xl font-bold tracking-tight text-[#202321] font-serif">
                   Evrika
                 </span>
-                <span className="text-xl font-light tracking-wide text-emerald-300">
+                <span className="text-xl font-light tracking-wide text-[#777b77]">
                   Dent
                 </span>
               </div>
-              <p className="text-[10px] tracking-wider uppercase text-emerald-200/70 font-medium">
+              <p className="text-[10px] tracking-wider uppercase text-[#68706d] font-medium">
                 Modern Dental Clinic
               </p>
             </div>
@@ -140,7 +140,7 @@ export default function Header() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-[13px] font-medium text-emerald-100/80 hover:text-white transition-colors relative py-1 hover:after:w-full after:w-0 after:h-[2px] after:bg-emerald-400 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-200"
+                className="text-[13px] font-medium text-[#4b514e] hover:text-[#202321] transition-colors relative py-1 hover:after:w-full after:w-0 after:h-[1px] after:bg-[#202321] after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-200"
               >
                 {link.name}
               </a>
@@ -149,11 +149,11 @@ export default function Header() {
 
           {/* Desktop CTA & Phone */}
           <div className="hidden md:flex items-center gap-4">
-            <div className="text-right hidden lg:block">
-              <div className="text-[11px] text-emerald-200/70 leading-none">Emergency & Appointments</div>
+              <div className="text-right hidden lg:block">
+              <div className="text-[11px] text-[#68706d] leading-none">Emergency & Appointments</div>
               <a
                 href={`tel:${CLINIC_CONFIG.phoneRaw}`}
-                className="text-xs font-semibold text-white hover:text-emerald-300 transition-colors"
+                className="text-xs font-semibold text-[#202321] hover:text-[#777b77] transition-colors"
               >
                 {CLINIC_CONFIG.phoneDisplay}
               </a>
@@ -163,7 +163,7 @@ export default function Header() {
               href={createWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-[#051a13] font-semibold text-xs px-5 py-2.5 rounded-full shadow-md hover:shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+              className="inline-flex items-center gap-2 bg-[#202321] hover:bg-[#434945] text-white font-semibold text-xs px-5 py-2.5 transition-all"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
               <span>Book Appointment</span>
@@ -173,7 +173,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 text-white hover:text-emerald-300 focus:outline-none"
+            className="xl:hidden p-2 text-[#202321] hover:text-[#777b77] focus:outline-none"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

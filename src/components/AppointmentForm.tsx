@@ -76,7 +76,7 @@ export default function AppointmentForm() {
               sizes="(max-width: 1200px) 40vw, 500px"
             />
             {/* Dark gradient overlay at the bottom */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#041510]/90 via-[#041510]/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#202321]/85 via-[#202321]/20 to-transparent" />
 
             {/* Overlay content — minimal */}
             <div className="absolute bottom-0 left-0 right-0 p-6 space-y-3">

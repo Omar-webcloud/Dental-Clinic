@@ -48,7 +48,7 @@ export default function TrustBar() {
                 key={idx}
                 className="flex flex-col items-center text-center p-3 rounded-2xl bg-white/60 backdrop-blur-xs border border-stone-200/60 shadow-xs hover:shadow-md hover:bg-white transition-all duration-300 group"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#0f3d2e]/10 text-[#0f3d2e] flex items-center justify-center mb-2.5 group-hover:bg-[#0f3d2e] group-hover:text-emerald-300 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[#0f3d2e]/10 text-emerald-950 flex items-center justify-center mb-2.5 group-hover:bg-[#0f3d2e] group-hover:text-white transition-colors">
                   <Icon className="w-5 h-5" />
                 </div>
                 <span className="text-xl sm:text-2xl font-extrabold text-[#0a261c] font-serif tracking-tight">

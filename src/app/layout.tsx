@@ -1,16 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { CLINIC_CONFIG } from "@/lib/whatsapp";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-jakarta",
+  display: "swap",
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-editorial",
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0a261c",
+  themeColor: "#f7f7f5",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -69,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${plusJakartaSans.variable} scroll-smooth`}>
+    <html lang="en" className={`${plusJakartaSans.variable} ${playfairDisplay.variable} scroll-smooth`}>
       <body className="min-h-screen flex flex-col font-sans antialiased bg-[#faf8f5] text-[#1a2e26]">
         {children}
       </body>

@@ -1,17 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --bg-warm: #faf8f5;
-  --bg-warm-card: #ffffff;
-  --color-primary-950: #051a13;
-  --color-primary-900: #0a261c;
-  --color-primary-800: #0f3d2e;
-  --color-primary-700: #14533f;
-  --color-primary-600: #1b6d53;
-  --color-primary-500: #258c6b;
-  --color-accent: #d4a373;
-  --color-accent-light: #fefae0;
+  --font-sans: var(--font-jakarta), sans-serif;
+  --font-serif: var(--font-editorial), Georgia, serif;
+  --bg-porcelain: #f7f7f5;
+  --bg-mist: #e9ebe8;
+  --color-charcoal: #202321;
+  --color-slate: #68706d;
+  --color-stone: #9b938a;
+  --color-graphite: #343a37;
+  --color-border: #d9ddda;
+}
+
+@theme {
+  --color-emerald-50: #f2f2f0;
+  --color-emerald-100: #e9ebe8;
+  --color-emerald-200: #d9ddda;
+  --color-emerald-300: #858b87;
+  --color-emerald-400: #68706d;
+  --color-emerald-500: #555b57;
+  --color-emerald-600: #4b514e;
+  --color-emerald-700: #434945;
+  --color-emerald-800: #343a37;
+  --color-emerald-900: #292e2b;
+  --color-emerald-950: #202321;
+  --color-stone-50: #f7f7f5;
+  --color-stone-100: #eeefed;
+  --color-stone-200: #e3e5e2;
+  --color-stone-300: #d9ddda;
+  --color-stone-400: #a3a7a3;
+  --color-stone-500: #858b87;
+  --color-stone-600: #68706d;
+  --color-stone-700: #4b514e;
+  --color-stone-800: #343a37;
 }
 
 html {
@@ -20,10 +41,40 @@ html {
 }
 
 body {
-  background-color: #faf8f5;
-  color: #1a2e26;
+  background-color: var(--bg-porcelain);
+  color: var(--color-charcoal);
   font-family: var(--font-sans);
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
+h2.font-extrabold,
+h3.font-bold {
+  font-weight: 500;
+}
+
+.rounded-3xl,
+.rounded-2xl,
+.rounded-xl {
+  border-radius: 4px !important;
+}
+
+.shadow-xl,
+.shadow-lg,
+.shadow-md {
+  box-shadow: none !important;
+}
+
+::selection {
+  color: #fff;
+  background: #555b57;
 }
 
 /* Custom modern scrollbar */
@@ -31,14 +82,14 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1ede4;
+  background: #e9ebe8;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0f3d2e;
+  background: #9b938a;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #1b6d53;
+  background: #68706d;
 }
 
 /* Glassmorphism utility */
@@ -50,29 +101,29 @@ body {
 }
 
 .glass-dark {
-  background: rgba(10, 38, 28, 0.78);
+  background: rgba(32, 35, 33, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .glass-card-hero {
-  background: rgba(15, 61, 46, 0.45);
+  background: rgba(32, 35, 33, 0.45);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.35);
 }
 
-/* Subtle pulse animation for WhatsApp button */
+/* Subtle pulse animation for the floating contact action */
 @keyframes pulse-subtle {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 10px 25px -5px rgba(32, 35, 33, 0.18);
   }
   50% {
     transform: scale(1.05);
-    box-shadow: 0 15px 35px -5px rgba(16, 185, 129, 0.6);
+    box-shadow: 0 15px 35px -5px rgba(32, 35, 33, 0.28);
   }
 }
 
@@ -95,3 +146,23 @@ body {
 .zoom-image:hover {
   transform: scale(1.04);
 }
+
+/* Neutralize legacy one-off palette values while sections migrate to shared tokens. */
+[class~="bg-[#faf8f5]"] { background-color: #f7f7f5 !important; }
+[class~="bg-[#f5f2eb]"],
+[class~="bg-[#f3eee6]"] { background-color: #e9ebe8 !important; }
+[class~="bg-[#051a13]"],
+[class~="bg-[#041510]"],
+[class~="bg-[#0a261c]"],
+[class~="bg-[#0f3d2e]"],
+[class~="bg-[#14533f]"],
+[class~="bg-[#25D366]"],
+[class~="bg-[#20bd5a]"] { background-color: #202321 !important; }
+[class~="text-[#051a13]"],
+[class~="text-[#0a261c]"],
+[class~="text-[#1a2e26]"],
+[class~="text-[#0f3d2e]"],
+[class~="text-[#14533f]"] { color: #202321 !important; }
+[class~="border-[#0f3d2e]"],
+[class~="border-[#e2d8c9]"],
+[class~="border-[#e5decb]"] { border-color: #d9ddda !important; }

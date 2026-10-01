@@ -112,7 +112,7 @@ export default function WhyChooseUs() {
                   key={idx}
                   className="bg-white rounded-2xl p-5 sm:p-6 border border-stone-200 shadow-xs hover:shadow-lg hover:border-emerald-300 transition-all duration-300 group flex flex-col sm:flex-row gap-4 items-start"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#0f3d2e] flex items-center justify-center shrink-0 group-hover:bg-[#0f3d2e] group-hover:text-emerald-300 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-950 flex items-center justify-center shrink-0 group-hover:bg-[#0f3d2e] group-hover:text-white transition-colors">
                     <Icon className="w-6 h-6" />
                   </div>
 
