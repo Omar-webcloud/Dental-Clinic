@@ -57,7 +57,7 @@ export default function Header() {
               <Phone className="w-3 h-3 text-emerald-400" />
               {CLINIC_CONFIG.phoneDisplay}
             </a>
-            <div className="hidden sm:flex items-center gap-2 pl-2 border-l border-[#0f3d2e]">
+            <div className="hidden sm:flex items-center gap-2 pl-2 border-l border-[#d9ddda]">
               <a
                 href={CLINIC_CONFIG.socials.whatsapp}
                 target="_blank"
@@ -184,17 +184,17 @@ export default function Header() {
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm xl:hidden flex justify-end">
-          <div className="w-[85%] max-w-sm bg-[#0a261c] h-full shadow-2xl p-6 flex flex-col justify-between border-l border-emerald-800/40 animate-in slide-in-from-right duration-200">
+          <div className="w-[85%] max-w-sm bg-[#202321] h-full shadow-2xl p-6 flex flex-col justify-between border-l border-white/10 animate-in slide-in-from-right duration-200">
             <div>
-              <div className="flex items-center justify-between pb-4 border-b border-emerald-800/50">
+              <div className="flex items-center justify-between pb-4 border-b border-white/10">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-600 p-1.5 flex items-center justify-center">
+                  <div className="w-8 h-8 bg-[#faf8f5] p-1.5 flex items-center justify-center">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
-                      className="w-5 h-5 text-white"
+                      className="w-5 h-5 text-[#202321]"
                     >
                       <path d="M12 2C8 2 6 5 6 9c0 3.5 1.5 8 3 12 1 2 2 2 3 0 .5-1 1-1 1.5 0 1 2 2 2 3 0 1.5-4 3-8.5 3-12 0-4-2-7-6.5-7h-2z" />
                     </svg>
@@ -203,34 +203,34 @@ export default function Header() {
                 </div>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-1.5 text-emerald-300 hover:text-white"
+                  className="p-1.5 text-white/60 hover:text-white"
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
 
-              <div className="mt-6 flex flex-col gap-3">
+              <div className="mt-6 flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-base font-medium text-emerald-100 hover:text-emerald-400 border-b border-emerald-900/30"
+                    className="flex items-center justify-between py-2.5 text-base font-medium text-white/80 hover:text-white border-b border-white/8 transition-colors"
                   >
                     <span>{link.name}</span>
-                    <ChevronRight className="w-4 h-4 text-emerald-500" />
+                    <ChevronRight className="w-4 h-4 text-white/40" />
                   </a>
                 ))}
               </div>
             </div>
 
-            <div className="pt-6 border-t border-emerald-800/50 flex flex-col gap-3">
+            <div className="pt-6 border-t border-white/10 flex flex-col gap-3">
               <a
                 href={createWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 bg-emerald-500 text-[#051a13] font-bold text-sm py-3 rounded-full shadow-lg"
+                className="w-full flex items-center justify-center gap-2 bg-white text-[#202321] font-bold text-sm py-3 transition-colors hover:bg-[#e9ebe8]"
               >
                 <MessageCircle className="w-5 h-5 fill-current" />
                 <span>Book on WhatsApp</span>
@@ -238,7 +238,7 @@ export default function Header() {
 
               <a
                 href={`tel:${CLINIC_CONFIG.phoneRaw}`}
-                className="w-full flex items-center justify-center gap-2 bg-[#0f3d2e] text-emerald-200 text-sm py-3 rounded-full border border-emerald-700/50"
+                className="w-full flex items-center justify-center gap-2 border border-white/20 text-white/80 text-sm py-3 transition-colors hover:bg-white/5"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call {CLINIC_CONFIG.phoneDisplay}</span>

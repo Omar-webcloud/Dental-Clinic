@@ -46,15 +46,15 @@ export default function TrustBar() {
             return (
               <div
                 key={idx}
-                className="flex flex-col items-center text-center p-3 rounded-2xl bg-white/60 backdrop-blur-xs border border-stone-200/60 shadow-xs hover:shadow-md hover:bg-white transition-all duration-300 group"
+                className="flex flex-col items-center text-center p-3 bg-white/60 backdrop-blur-xs border border-stone-200/60 hover:bg-white transition-all duration-300 group"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#0f3d2e]/10 text-emerald-950 flex items-center justify-center mb-2.5 group-hover:bg-[#0f3d2e] group-hover:text-white transition-colors">
+                <div className="w-10 h-10 flex items-center justify-center mb-2.5 bg-[#e9ebe8] text-[#343a37] group-hover:bg-[#202321] group-hover:text-white transition-colors">
                   <Icon className="w-5 h-5" />
                 </div>
-                <span className="text-xl sm:text-2xl font-extrabold text-[#0a261c] font-serif tracking-tight">
+                <span className="text-xl sm:text-2xl font-extrabold text-[#202321] font-serif tracking-tight">
                   {item.value}
                 </span>
-                <span className="text-xs font-bold text-[#1b5340] uppercase tracking-wider mt-0.5">
+                <span className="text-xs font-bold text-[#343a37] uppercase tracking-wider mt-0.5">
                   {item.label}
                 </span>
                 <span className="text-[11px] text-stone-500 mt-1">

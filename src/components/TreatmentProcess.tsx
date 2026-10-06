@@ -61,16 +61,16 @@ export default function TreatmentProcess() {
               >
                 {/* Step number badge */}
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-950 flex items-center justify-center group-hover:bg-[#0f3d2e] group-hover:text-white transition-colors">
+                  <div className="w-12 h-12 bg-[#e9ebe8] text-[#343a37] flex items-center justify-center group-hover:bg-[#202321] group-hover:text-white transition-colors">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-3xl font-extrabold text-stone-200 group-hover:text-emerald-300 transition-colors font-serif">
+                  <span className="text-3xl font-extrabold text-stone-200 group-hover:text-[#9b938a] transition-colors font-serif">
                     {step.num}
                   </span>
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-[#0a261c] font-serif group-hover:text-[#14533f] transition-colors">
+                  <h3 className="text-lg font-bold text-[#202321] font-serif group-hover:text-[#68706d] transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
@@ -79,7 +79,7 @@ export default function TreatmentProcess() {
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-stone-100">
-                  <span className="inline-block text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60">
+                  <span className="inline-block text-[11px] font-bold text-[#343a37] bg-stone-100 px-2.5 py-1 border border-stone-200">
                     ✓ {step.highlight}
                   </span>
                 </div>
@@ -94,11 +94,11 @@ export default function TreatmentProcess() {
             href={createWhatsAppUrl("Hello Evrika Dent, I would like to start with Step 1 and book an initial dental consultation.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#0f3d2e] hover:bg-[#14533f] text-emerald-100 hover:text-white font-bold text-sm sm:text-base px-8 py-4 rounded-full shadow-lg hover:shadow-emerald-900/30 hover:scale-105 transition-all group"
+            className="inline-flex items-center gap-2 bg-[#202321] hover:bg-[#434945] text-white font-bold text-sm sm:text-base px-8 py-4 shadow-lg hover:shadow-black/20 hover:scale-105 transition-all group"
           >
-            <MessageCircle className="w-5 h-5 text-emerald-400 fill-current" />
+            <MessageCircle className="w-5 h-5 fill-current" />
             <span>Start Step 1: Request WhatsApp Appointment</span>
-            <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 text-white/60 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
 

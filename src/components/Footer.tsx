@@ -21,15 +21,15 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-[#051a13] text-stone-300 pt-16 pb-24 md:pb-12 border-t border-[#0f3d2e]">
+      <footer className="bg-[#202321] text-stone-300 pt-16 pb-24 md:pb-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-[#0f3d2e]/80">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-white/10">
             
             {/* Column 1: Brand & Bio (4 cols) */}
             <div className="lg:col-span-4 space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-[#0f3d2e] p-2 flex items-center justify-center border border-emerald-500/30">
+                <div className="w-10 h-10 bg-[#343a37] p-2 flex items-center justify-center border border-white/10">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -45,7 +45,7 @@ export default function Footer() {
                   <span className="text-xl font-bold tracking-tight text-white font-serif">
                     Evrika
                   </span>
-                  <span className="text-xl font-light tracking-wide text-emerald-400 ml-1">
+                  <span className="text-xl font-light tracking-wide text-white/50 ml-1">
                     Dent
                   </span>
                 </div>
@@ -61,7 +61,7 @@ export default function Footer() {
                   href={CLINIC_CONFIG.socials.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#0a261c] hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center border border-emerald-800/40 transition-colors"
+                  className="w-9 h-9 bg-white/10 hover:bg-white/20 text-white/70 hover:text-white flex items-center justify-center border border-white/10 transition-colors"
                   aria-label="WhatsApp"
                 >
                   <MessageCircle className="w-4 h-4 fill-current" />
@@ -70,7 +70,7 @@ export default function Footer() {
                   href={CLINIC_CONFIG.socials.telegram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#0a261c] hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center border border-emerald-800/40 transition-colors"
+                  className="w-9 h-9 bg-white/10 hover:bg-white/20 text-white/70 hover:text-white flex items-center justify-center border border-white/10 transition-colors"
                   aria-label="Telegram"
                 >
                   <Send className="w-4 h-4" />
@@ -79,7 +79,7 @@ export default function Footer() {
                   href={CLINIC_CONFIG.socials.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#0a261c] hover:bg-emerald-600 text-emerald-400 hover:text-white flex items-center justify-center border border-emerald-800/40 transition-colors"
+                  className="w-9 h-9 bg-white/10 hover:bg-white/20 text-white/70 hover:text-white flex items-center justify-center border border-white/10 transition-colors"
                   aria-label="Instagram"
                 >
                   <svg className="w-4 h-4 fill-none stroke-current" strokeWidth="2" viewBox="0 0 24 24">
@@ -151,7 +151,7 @@ export default function Footer() {
                     href={getServiceWhatsAppUrl("Swiss Dental Implants")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-emerald-400 transition-colors flex items-center gap-1"
+                    className="hover:text-white/60 transition-colors flex items-center gap-1"
                   >
                     <span>Swiss Dental Implants</span>
                   </a>
@@ -161,7 +161,7 @@ export default function Footer() {
                     href={getServiceWhatsAppUrl("Ceramic Porcelain Veneers")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-emerald-400 transition-colors"
+                    className="hover:text-white/70 transition-colors"
                   >
                     Ceramic Porcelain Veneers
                   </a>
@@ -171,7 +171,7 @@ export default function Footer() {
                     href={getServiceWhatsAppUrl("Microscope Root Canal Treatment")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-emerald-400 transition-colors"
+                    className="hover:text-white/70 transition-colors"
                   >
                     Microscope Root Canal Therapy
                   </a>
@@ -181,7 +181,7 @@ export default function Footer() {
                     href={getServiceWhatsAppUrl("Professional Laser Whitening")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-emerald-400 transition-colors"
+                    className="hover:text-white/70 transition-colors"
                   >
                     Professional Laser Whitening
                   </a>
@@ -191,7 +191,7 @@ export default function Footer() {
                     href={getServiceWhatsAppUrl("Clear Aligners Orthodontics")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-emerald-400 transition-colors"
+                    className="hover:text-white/70 transition-colors"
                   >
                     Clear Aligners & Orthodontics
                   </a>
@@ -201,7 +201,7 @@ export default function Footer() {
                     href={getServiceWhatsAppUrl("AirFlow Spa Dental Hygiene")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-emerald-400 transition-colors"
+                    className="hover:text-white/70 transition-colors"
                   >
                     AirFlow Spa Dental Hygiene
                   </a>
@@ -216,28 +216,28 @@ export default function Footer() {
               </h4>
               <div className="space-y-2.5 text-xs text-stone-400">
                 <div className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-white/40 shrink-0 mt-0.5" />
                   <span>{CLINIC_CONFIG.address}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <Phone className="w-4 h-4 text-white/40 shrink-0" />
                   <a href={`tel:${CLINIC_CONFIG.phoneRaw}`} className="text-white hover:underline">
                     {CLINIC_CONFIG.phoneDisplay}
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <MessageCircle className="w-4 h-4 text-white/40 shrink-0" />
                   <a
                     href={createWhatsAppUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-emerald-400 font-medium hover:underline"
+                    className="text-white/70 font-medium hover:underline"
                   >
                     WhatsApp: {CLINIC_CONFIG.whatsappNumber}
                   </a>
                 </div>
                 <div className="flex items-start gap-2 pt-1 text-[11px]">
-                  <Clock className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <Clock className="w-4 h-4 text-white/40 shrink-0 mt-0.5" />
                   <div>
                     <div>{CLINIC_CONFIG.workingHours.weekdays}</div>
                     <div>{CLINIC_CONFIG.workingHours.saturday}</div>
@@ -249,7 +249,7 @@ export default function Footer() {
           </div>
 
           {/* Bottom copyright & policies */}
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
             <div>
               © 2026 {CLINIC_CONFIG.name}. All rights reserved.
             </div>
@@ -257,11 +257,11 @@ export default function Footer() {
             <div className="flex items-center gap-6">
               <button
                 onClick={() => setPrivacyOpen(true)}
-                className="hover:text-emerald-400 transition-colors cursor-pointer"
+                className="hover:text-white/60 transition-colors cursor-pointer"
               >
-                Privacy Policy & Direct WhatsApp Architecture
+                Privacy Policy
               </button>
-              <a href="#book" className="text-emerald-400 font-semibold hover:underline">
+              <a href="#book" className="text-white/60 font-semibold hover:text-white transition-colors">
                 Book Online
               </a>
             </div>

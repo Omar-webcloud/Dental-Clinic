@@ -81,8 +81,8 @@ export default function ContactSection() {
             </div>
 
             {/* WhatsApp */}
-            <div className="bg-emerald-900 text-white rounded-2xl p-5 sm:p-6 border border-emerald-700/50 shadow-md flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500 text-[#051a13] flex items-center justify-center shrink-0">
+            <div className="bg-[#202321] text-white rounded-2xl p-5 sm:p-6 border border-white/10 shadow-md flex items-start gap-4">
+              <div className="w-10 h-10 bg-[#343a37] text-white flex items-center justify-center shrink-0">
                 <MessageCircle className="w-5 h-5 fill-current" />
               </div>
               <div className="flex-1">
@@ -94,7 +94,7 @@ export default function ContactSection() {
                   href={createWhatsAppUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-300 hover:text-white mt-3 underline"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-white/60 hover:text-white mt-3 underline"
                 >
                   <span>Chat on WhatsApp Now</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -155,9 +155,9 @@ export default function ContactSection() {
                 href="https://maps.google.com/?q=742+Evergreen+Medical+Plaza+New+York+NY"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#0f3d2e] hover:bg-[#14533f] text-emerald-100 hover:text-white font-bold text-xs sm:text-sm py-3 px-6 rounded-full shadow-md transition-all shrink-0"
+                className="inline-flex items-center gap-2 bg-[#202321] hover:bg-[#434945] text-white font-bold text-xs sm:text-sm py-3 px-6 shadow-md transition-all shrink-0"
               >
-                <Navigation className="w-4 h-4 text-emerald-400" />
+                <Navigation className="w-4 h-4 text-white/60" />
                 <span>Get Google Maps Directions</span>
               </a>
             </div>
